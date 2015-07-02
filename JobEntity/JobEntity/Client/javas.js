@@ -1,0 +1,4 @@
+﻿        function Canc() {
+            window.close()
+        }
+   

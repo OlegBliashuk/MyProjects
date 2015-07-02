@@ -1,0 +1,37 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="ListOfWorkersModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="Workman">
+        <Key>
+          <PropertyRef Name="PersonID" />
+        </Key>
+        <Property Name="PersonID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Surnume" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="SecondName" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="DateOfBirth" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="Position" Type="Edm.String" Nullable="false" MaxLength="35" Unicode="true" FixedLength="true" />
+        <Property Name="Salary" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Expirience" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+        <Property Name="DateOfStart" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+      </EntityType>
+      <EntityType Name="PoliceList">
+        <Key>
+          <PropertyRef Name="PersonID" />
+        </Key>
+        <Property Name="PersonID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Surnume" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="SecondName" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="DateOfBirth" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        <Property Name="CrimeAction" Type="Edm.String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="true" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="BusinesObj" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="ListOfWorkersEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Workman" EntityType="ListOfWorkersModel.Workman" />
+        <EntitySet Name="PoliceList" EntityType="ListOfWorkersModel.PoliceList" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
